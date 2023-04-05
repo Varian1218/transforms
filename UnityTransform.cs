@@ -8,13 +8,18 @@ namespace Transforms
     {
         private Transform _impl;
 
-        public SystemVector3 Forward { set => _impl.forward = Convert(value); }
+        public SystemVector3 Forward
+        {
+            set => _impl.forward = Convert(value);
+        }
 
         public SystemVector3 Position
         {
             get => Convert(_impl.position);
             set => _impl.position = Convert(value);
         }
+
+        public SystemVector3 Up => Convert(_impl.up);
 
         public Transform Impl
         {

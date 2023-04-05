@@ -28,6 +28,8 @@ namespace Transforms
             }
         }
 
+        public Vector3 Up => _impl.Up;
+
         public event Action<Vector3> PositionChanged;
 
         public ITransform Impl
