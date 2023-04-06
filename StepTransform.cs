@@ -54,7 +54,7 @@ namespace Transforms
             if (forwardDelta.LengthSquared() > 0)
             {
                 _rotateCurrentSpeed += _rotateAccel * dt;
-                _impl.Forward = TransformUtility.RotateTowards(_impl.Forward, Forward, _rotateCurrentSpeed);
+                _impl.Forward = TransformUtility.RotateTowards(_impl.Forward, Forward, _rotateCurrentSpeed * dt);
             }
             else
             {
