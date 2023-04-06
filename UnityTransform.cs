@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
-using SystemVector3 = System.Numerics.Vector3;
-using UnityVector3 = UnityEngine.Vector3;
+using Vector3 = System.Numerics.Vector3;
 
 namespace Transforms
 {
@@ -8,32 +7,23 @@ namespace Transforms
     {
         private Transform _impl;
 
-        public SystemVector3 Forward
+        public Vector3 Forward
         {
-            set => _impl.forward = Convert(value);
+            get => UnityUtils.Convert(_impl.forward);
+            set => _impl.forward = UnityUtils.Convert(value);
         }
 
-        public SystemVector3 Position
-        {
-            get => Convert(_impl.position);
-            set => _impl.position = Convert(value);
-        }
-
-        public SystemVector3 Up => Convert(_impl.up);
+        public Vector3 Up => UnityUtils.Convert(_impl.up);
 
         public Transform Impl
         {
             set => _impl = value;
         }
 
-        private static SystemVector3 Convert(UnityVector3 value)
+        public Vector3 Position
         {
-            return new SystemVector3(value.x, value.y, value.z);
-        }
-
-        private static UnityVector3 Convert(SystemVector3 value)
-        {
-            return new UnityVector3(value.X, value.Y, value.Z);
+            get => UnityUtils.Convert(_impl.position);
+            set => _impl.position = UnityUtils.Convert(value);
         }
     }
 }

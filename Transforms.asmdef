@@ -1,3 +1,16 @@
 {
-	"name": "Transforms"
+    "name": "Transforms",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e2c06f66710174805a43140fa6f80959"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
