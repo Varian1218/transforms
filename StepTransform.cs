@@ -23,7 +23,11 @@ namespace Transforms
 
         public ITransform Impl
         {
-            set => _impl = value;
+            set
+            {
+                _forward = value.Forward;
+                _impl = value;
+            }
         }
 
         public Vector3 Position
