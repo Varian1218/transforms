@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "com.little-lion.times": "https://github.com/littlelion-libraries/times.git"
+  },
   "description": "",
   "displayName": "Transforms",
   "keywords": [],

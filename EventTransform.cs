@@ -9,6 +9,7 @@ namespace Transforms
 
         public Vector3 Forward
         {
+            get => _impl.Forward;
             set
             {
                 _impl.Forward = value;
