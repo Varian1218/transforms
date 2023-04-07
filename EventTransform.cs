@@ -29,6 +29,12 @@ namespace Transforms
             }
         }
 
+        public Vector3 LocalScale
+        {
+            get => _impl.LocalScale;
+            set => _impl.LocalScale = value;
+        }
+
         public Vector3 Up => _impl.Up;
 
         public event Action<Vector3> PositionChanged;

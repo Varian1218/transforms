@@ -13,6 +13,12 @@ namespace Transforms
             set => _impl.forward = UnityUtils.Convert(value);
         }
 
+        public Vector3 LocalScale
+        {
+            get => UnityUtils.Convert(_impl.localScale);
+            set => _impl.localScale = UnityUtils.Convert(value);
+        }
+
         public Vector3 Up => UnityUtils.Convert(_impl.up);
 
         public Transform Impl

@@ -36,6 +36,12 @@ namespace Transforms
             set => _impl.Position = value;
         }
 
+        public Vector3 LocalScale
+        {
+            get => _impl.LocalScale;
+            set => _impl.LocalScale = value;
+        }
+
         public float RotateAccel
         {
             set => _rotateAccel = value;
