@@ -37,6 +37,21 @@ namespace Transforms
 
         public Vector3 Up => _impl.Up;
 
+        public void AddChild(ITransform child)
+        {
+            _impl.AddChild(child);
+        }
+
+        public void AddChild(ITransform child, bool worldPositionStays)
+        {
+            _impl.AddChild(child, worldPositionStays);
+        }
+
+        public T GetComponent<T>()
+        {
+            return _impl.GetComponent<T>();
+        }
+
         public event Action<Vector3> PositionChanged;
 
         public ITransform Impl

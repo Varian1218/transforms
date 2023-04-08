@@ -21,6 +21,21 @@ namespace Transforms
 
         public Vector3 Up => UnityUtils.Convert(_impl.up);
 
+        public void AddChild(ITransform child)
+        {
+            child.GetComponent<Transform>().SetParent(_impl);
+        }
+
+        public void AddChild(ITransform child, bool worldPositionStays)
+        {
+            child.GetComponent<Transform>().SetParent(_impl, worldPositionStays);
+        }
+
+        public T GetComponent<T>()
+        {
+            return _impl.GetComponent<T>();
+        }
+
         public Transform Impl
         {
             set => _impl = value;
