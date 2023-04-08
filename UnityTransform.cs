@@ -31,6 +31,11 @@ namespace Transforms
             child.GetComponent<Transform>().SetParent(_impl, worldPositionStays);
         }
 
+        public void Destroy()
+        {
+            Object.Destroy(_impl.gameObject);
+        }
+
         public T GetComponent<T>()
         {
             return _impl.GetComponent<T>();

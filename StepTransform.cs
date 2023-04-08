@@ -64,6 +64,11 @@ namespace Transforms
             _impl.AddChild(child, worldPositionStays);
         }
 
+        public void Destroy()
+        {
+            _impl.Destroy();
+        }
+
         public T GetComponent<T>()
         {
             return _impl.GetComponent<T>();

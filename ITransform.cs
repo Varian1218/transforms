@@ -10,6 +10,7 @@ namespace Transforms
         Vector3 Up { get; }
         void AddChild(ITransform child);
         void AddChild(ITransform child, bool worldPositionStays);
+        void Destroy();
         T GetComponent<T>();
     }
 }
