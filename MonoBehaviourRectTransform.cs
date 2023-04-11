@@ -14,6 +14,11 @@ namespace Transforms
 
         public float Height => Impl.Height;
 
+        public ITransform Parent
+        {
+            set => _impl.Parent = value;
+        }
+
         public Vector2 Size => Impl.Size;
 
         public ITransform Transform => Impl.Transform;
