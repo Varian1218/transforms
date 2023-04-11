@@ -16,7 +16,7 @@ namespace Transforms
 
         public ITransform Parent
         {
-            set => _impl.Parent = value;
+            set => Impl.Parent = value;
         }
 
         public Vector2 Size => Impl.Size;
