@@ -19,7 +19,11 @@ namespace Transforms
             }
         }
 
-        public float Height => _impl.rect.size.y;
+        public float Height
+        {
+            get => _impl.rect.size.y;
+            set => _impl.sizeDelta = new UnityEngine.Vector2(_impl.sizeDelta.x, value);
+        }
 
         public ITransform Parent
         {
@@ -33,6 +37,10 @@ namespace Transforms
         }
 
         public ITransform Transform { get; private set; }
-        public float Width => _impl.rect.size.x;
+        public float Width
+        {
+            get => _impl.rect.size.x;
+            set => _impl.sizeDelta = new UnityEngine.Vector2(value, _impl.sizeDelta.y);
+        }
     }
 }

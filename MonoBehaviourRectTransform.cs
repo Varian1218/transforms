@@ -12,7 +12,11 @@ namespace Transforms
             Impl = GetComponent<RectTransform>()
         };
 
-        public float Height => Impl.Height;
+        public float Height
+        {
+            get => Impl.Height;
+            set => Impl.Height = value;
+        }
 
         public ITransform Parent
         {
@@ -27,6 +31,10 @@ namespace Transforms
 
         public ITransform Transform => Impl.Transform;
 
-        public float Width => Impl.Width;
+        public float Width
+        {
+            get => Impl.Width;
+            set => Impl.Width = value;
+        }
     }
 }
