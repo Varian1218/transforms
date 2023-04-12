@@ -19,7 +19,11 @@ namespace Transforms
             set => Impl.Parent = value;
         }
 
-        public Vector2 Size => Impl.Size;
+        public Vector2 Size
+        {
+            get => Impl.Size;
+            set => Impl.Size = value;
+        }
 
         public ITransform Transform => Impl.Transform;
 

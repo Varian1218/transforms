@@ -12,6 +12,11 @@ namespace Transforms
             return new SystemVector2(value.x, value.y);
         }
         
+        public static UnityVector2 Convert(SystemVector2 value)
+        {
+            return new UnityVector2(value.X, value.Y);
+        }
+        
         public static SystemVector3 Convert(UnityVector3 value)
         {
             return new SystemVector3(value.x, value.y, value.z);

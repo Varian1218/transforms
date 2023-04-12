@@ -26,7 +26,12 @@ namespace Transforms
             set => _impl.SetParent(value.GetComponent<Transform>(), false);
         }
 
-        public Vector2 Size => UnityUtils.Convert(_impl.rect.size);
+        public Vector2 Size
+        {
+            get => UnityUtils.Convert(_impl.rect.size);
+            set => _impl.sizeDelta = UnityUtils.Convert(value);
+        }
+
         public ITransform Transform { get; private set; }
         public float Width => _impl.rect.size.x;
     }

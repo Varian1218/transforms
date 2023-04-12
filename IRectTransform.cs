@@ -6,7 +6,7 @@ namespace Transforms
     {
         float Height { get; }
         ITransform Parent { set; }
-        Vector2 Size { get; }
+        Vector2 Size { get; set; }
         ITransform Transform { get; }
         float Width { get; }
     }
