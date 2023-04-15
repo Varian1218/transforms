@@ -54,12 +54,12 @@ namespace Transforms
 
         public Vector3 Up => _impl.Up;
 
-        public void AddChild(ITransform child)
+        public void AddChild(IComponentGetHandler child)
         {
             _impl.AddChild(child);
         }
 
-        public void AddChild(ITransform child, bool worldPositionStays)
+        public void AddChild(IComponentGetHandler child, bool worldPositionStays)
         {
             _impl.AddChild(child, worldPositionStays);
         }

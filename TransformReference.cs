@@ -30,12 +30,12 @@ namespace Transforms
 
         public Vector3 Up => UnityUtils.Convert(impl.up);
 
-        public void AddChild(ITransform child)
+        public void AddChild(IComponentGetHandler child)
         {
             child.GetComponent<Transform>().SetParent(impl);
         }
 
-        public void AddChild(ITransform child, bool worldPositionStays)
+        public void AddChild(IComponentGetHandler child, bool worldPositionStays)
         {
             child.GetComponent<Transform>().SetParent(impl);
         }

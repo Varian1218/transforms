@@ -2,15 +2,14 @@
 
 namespace Transforms
 {
-    public interface ITransform
+    public interface ITransform : IComponentGetHandler
     {
         Vector3 Forward { get; set; }
         Vector3 Position { get; set; }
         Vector3 LocalScale { get; set; }
         Vector3 Up { get; }
-        void AddChild(ITransform child);
-        void AddChild(ITransform child, bool worldPositionStays);
+        void AddChild(IComponentGetHandler child);
+        void AddChild(IComponentGetHandler child, bool worldPositionStays);
         void Destroy();
-        T GetComponent<T>();
     }
 }

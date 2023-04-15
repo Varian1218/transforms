@@ -28,12 +28,12 @@ namespace Transforms
             get => UnityUtils.Convert(transform.up);
         }
 
-        public void AddChild(ITransform child)
+        public void AddChild(IComponentGetHandler child)
         {
             child.GetComponent<Transform>().SetParent(transform);
         }
 
-        public void AddChild(ITransform child, bool worldPositionStays)
+        public void AddChild(IComponentGetHandler child, bool worldPositionStays)
         {
             child.GetComponent<Transform>().SetParent(transform, worldPositionStays);
         }
