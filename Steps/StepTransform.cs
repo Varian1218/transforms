@@ -1,4 +1,5 @@
 using System.Numerics;
+using Times;
 
 namespace Transforms.Steps
 {
@@ -73,7 +74,7 @@ namespace Transforms.Steps
             return _impl.GetComponent<T>();
         }
 
-        public void Step(float dt)
+        public void Step(ShortTimeSpan dt)
         {
             var forwardDelta = Forward - _impl.Forward;
             if (forwardDelta.LengthSquared() > 0)
