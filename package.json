@@ -1,11 +1,13 @@
 {
-  "dependencies": {
-    "com.little-lion.times": "https://github.com/littlelion-libraries/times.git"
+  "author": {
+    "name": "Little Lion",
+    "url": "https://github.com/little-lion-libraries"
   },
+  "dependencies": {},
   "description": "",
   "displayName": "Transforms",
   "keywords": [],
   "name": "com.little-lion.transforms",
   "unity": "2021.3",
-  "version": "1.15.0"
+  "version": "1.16.0"
 }

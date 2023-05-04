@@ -1,0 +1,17 @@
+{
+    "name": "Transforms.Steps",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e2c06f66710174805a43140fa6f80959",
+        "GUID:2a0bc8a019b72014e8984aa6f673648d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
