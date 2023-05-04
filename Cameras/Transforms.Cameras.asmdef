@@ -1,0 +1,17 @@
+{
+    "name": "Transforms.Cameras",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a3550bd9cccd74447ab9aec884d8e26e",
+        "GUID:2a0bc8a019b72014e8984aa6f673648d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

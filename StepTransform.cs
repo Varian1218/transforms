@@ -1,5 +1,4 @@
 using System.Numerics;
-using Times;
 
 namespace Transforms
 {
@@ -72,20 +71,6 @@ namespace Transforms
         public T GetComponent<T>()
         {
             return _impl.GetComponent<T>();
-        }
-
-        public void Step(ShortTimeSpan dt)
-        {
-            var forwardDelta = Forward - _impl.Forward;
-            if (forwardDelta.LengthSquared() > 0)
-            {
-                _rotateCurrentSpeed += _rotateAccel * dt;
-                _impl.Forward = TransformUtility.RotateTowards(_impl.Forward, Forward, _rotateCurrentSpeed * dt);
-            }
-            else
-            {
-                _rotateCurrentSpeed = 0f;
-            }
         }
     }
 }
