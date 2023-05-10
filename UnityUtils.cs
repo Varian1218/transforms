@@ -1,5 +1,7 @@
+using SystemQuaternion = System.Numerics.Quaternion;
 using SystemVector2 = System.Numerics.Vector2;
 using SystemVector3 = System.Numerics.Vector3;
+using UnityQuaternion = UnityEngine.Quaternion;
 using UnityVector2 = UnityEngine.Vector2;
 using UnityVector3 = UnityEngine.Vector3;
 
@@ -25,6 +27,16 @@ namespace Transforms
         public static UnityVector3 Convert(SystemVector3 value)
         {
             return new UnityVector3(value.X, value.Y, value.Z);
+        }
+
+        public static UnityQuaternion Convert(SystemQuaternion value)
+        {
+            return new UnityQuaternion(value.X, value.Y, value.Z, value.W);
+        }
+
+        public static SystemQuaternion Convert(UnityQuaternion value)
+        {
+            return new SystemQuaternion(value.x, value.y, value.z, value.w);
         }
     }
 }

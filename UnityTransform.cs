@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Quaternion = System.Numerics.Quaternion;
 using Vector3 = System.Numerics.Vector3;
 
 namespace Transforms
@@ -6,6 +7,22 @@ namespace Transforms
     public class UnityTransform : ITransform
     {
         private Transform _impl;
+
+        public TransformData Data
+        {
+            get => new()
+            {
+                LocalScale = LocalScale,
+                Position = Position,
+                Rotation = Rotation
+            };
+            set
+            {
+                LocalScale = value.LocalScale;
+                Position = value.Position;
+                Rotation = value.Rotation;
+            }
+        }
 
         public Vector3 Forward
         {
@@ -50,6 +67,12 @@ namespace Transforms
         {
             get => UnityUtils.Convert(_impl.position);
             set => _impl.position = UnityUtils.Convert(value);
+        }
+
+        public Quaternion Rotation
+        {
+            get => UnityUtils.Convert(_impl.rotation);
+            set => _impl.rotation = UnityUtils.Convert(value);
         }
     }
 }

@@ -4,6 +4,7 @@ namespace Transforms
 {
     public interface ITransform : IComponentGetHandler, IPositionTransform
     {
+        TransformData Data { get; set; }
         Vector3 Forward { get; set; }
         Vector3 LocalScale { get; set; }
         Vector3 Up { get; }

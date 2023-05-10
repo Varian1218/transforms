@@ -13,6 +13,12 @@ namespace Transforms.Cameras
             return Impl.GetComponent<T>();
         }
 
+        public TransformData Data
+        {
+            get => Impl.Data;
+            set => Impl.Data = value;
+        }
+
         public Vector3 Forward
         {
             get => Impl.Forward;

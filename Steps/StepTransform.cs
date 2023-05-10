@@ -11,6 +11,12 @@ namespace Transforms.Steps
         private float _rotateAccel;
         private float _rotateSpeed;
 
+        public TransformData Data
+        {
+            get => _impl.Data;
+            set => _impl.Data = value;
+        }
+
         public Vector3 Forward
         {
             get => _forward;
