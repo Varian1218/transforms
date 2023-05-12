@@ -1,4 +1,4 @@
-namespace Transforms.Objects
+namespace Transforms
 {
     public interface ITransformObject
     {
